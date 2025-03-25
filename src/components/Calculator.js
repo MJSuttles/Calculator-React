@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { evaluate } from 'mathjs';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 
@@ -28,10 +29,8 @@ export default function Calculator() {
       <Row>
         <Col md={{ span: 4, offset: 4 }}>
           <div className="border p-3 bg-light">
-            <h2 className="text-primary">Calculator</h2> {/* Title in blue */}
-            {/* Ensure text is visible in the input area */}
+            <h2 className="text-primary">Calculator</h2>
             <div className="mb-2 p-2 bg-white text-dark border">{input || '0'}</div>
-            {/* Ensure result text is visible */}
             <div className="mb-2 p-2 bg-white text-primary border">{result}</div>
             <Row>
               {['7', '8', '9', '/'].map((val) => (
